@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.h": "c",
+    },
+
+    "cmake.configureOnOpen": false,
+
+    "cortex-debug.variableUseNaturalFormat": false,
+    "cmsis-csolution.actions": [
+        {
+            "path": "alif.csolution.yaml",
+            "target": "HE",
+            "config": {
+                "debug": "Alif Ensemble Debug (Cortex-Debug)"
+            }
+        }
+    ],
+}
