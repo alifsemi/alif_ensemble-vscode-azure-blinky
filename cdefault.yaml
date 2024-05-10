@@ -7,7 +7,7 @@ default:
         - -std=c99
         - -fdata-sections
       Link:
-        - --specs=rdimon.specs
+        - --specs=nosys.specs
         - --entry=Reset_Handler
         - -Wl,-Map=linker.map,--cref,-print-memory-usage,--gc-sections,--no-warn-rwx-segments
         # generate linker map
