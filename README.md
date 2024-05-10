@@ -49,4 +49,4 @@ For Alif SE tools and J-link debugging support add the following entries to VS C
 Please refer to the [Getting started guide](doc/getting_started.md)
 
 ## Examples for Alif Peripherals
-More Azure Alif peripheral examples can befound from https://github.com/alifsemi/alif_ensemble-Azure-RTOS/tree/main/THREADX/samples
+More Azure Alif peripheral examples can be found from https://github.com/alifsemi/alif_ensemble-Azure-RTOS/tree/main/THREADX/samples
