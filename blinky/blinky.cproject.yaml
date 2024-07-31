@@ -88,6 +88,6 @@ project:
     - component: AlifSemiconductor::Device:SOC Peripherals:MHU
     - component: AlifSemiconductor::RTOS&AzureRTOS:Kernel:Core
     - component: AlifSemiconductor::RTOS&AzureRTOS:Kernel:GCC_Port
-    - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:Core
-    - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:CDC Device Class
-    - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:Device Class Driver
+    # - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:Core
+    # - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:CDC Device Class
+    # - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:Device Class Driver
