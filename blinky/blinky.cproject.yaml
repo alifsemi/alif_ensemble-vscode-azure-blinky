@@ -82,7 +82,6 @@ project:
     # - component: AlifSemiconductor::Device:Retarget IO:STDERR
     # - component: AlifSemiconductor::Device:Retarget IO:STDIN
     # - component: AlifSemiconductor::Device:Retarget IO:STDOUT
-    - component: AlifSemiconductor::Device:Startup
     - component: AlifSemiconductor::Device:SE runtime Services:core
     - component: AlifSemiconductor::Device:SE runtime Services:Initialization Helper
     - component: AlifSemiconductor::Device:SOC Peripherals:MHU

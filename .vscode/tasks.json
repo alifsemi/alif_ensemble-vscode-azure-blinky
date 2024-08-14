@@ -2,24 +2,32 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "type": "cmsis-csolution.build",
+            "solution": "${command:cmsis-csolution.getSolutionPath}",
+            "useContextSet": true,
+            "rebuild": false,
+            "problemMatcher": [],
+            "label": "cmsis-csolution.build: Build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "Clean all (including YML build files)",
             "type": "shell",
             "windows": {
                 "command": [
                     "cbuild ${command:cmsis-csolution.getSolutionPath} --clean;",
                     "rm -Force ./blinky/*.cbuild.yml;",
-                    "rm -Force ./blinky/*.cprj;",
-                    "rm -Force ./hello/*.cbuild.yml;",
-                    "rm -Force ./hello/*.cprj;"
+                    "rm -Force ./blinky/*.cprj;"
                 ]
             },
             "linux": {
                 "command": [
                     "cbuild ${command:cmsis-csolution.getSolutionPath} --clean;",
                     "rm -f ./blinky/*.cbuild.yml;",
-                    "rm -f ./blinky/*.cprj;",
-                    "rm -f ./hello/*.cbuild.yml;",
-                    "rm -f ./hello/*.cprj;"
+                    "rm -f ./blinky/*.cprj;"
                 ]
             },
             "problemMatcher": []
@@ -30,8 +38,8 @@
             "command": [
                 "cpackget init https://www.keil.com/pack/index.pidx;",
                 "cpackget add https://github.com/ARM-software/CMSIS_6/releases/download/v6.0.0/ARM.CMSIS.6.0.0.pack;",
-                "cpackget add https://github.com/alifsemi/alif_ensemble-cmsis-dfp/releases/download/v1.1.1/AlifSemiconductor.Ensemble.1.1.1.pack;",
-                "cpackget add https://github.com/alifsemi/alif_ensemble-Azure-RTOS/releases/download/v1.1.0/AlifSemiconductor.AzureRTOS.1.1.0.pack;",
+                "cpackget add https://github.com/alifsemi/alif_ensemble-cmsis-dfp/releases/download/v1.2.1/AlifSemiconductor.Ensemble.1.2.1.pack;",
+                "cpackget add https://github.com/alifsemi/alif_ensemble-Azure-RTOS/releases/download/v1.2.0/AlifSemiconductor.AzureRTOS.1.2.0.pack;",
                 "cpackget list;",
                 "echo 'Pack installation has been completed'"
             ],

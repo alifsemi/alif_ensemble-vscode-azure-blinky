@@ -4,9 +4,9 @@ solution:
   cdefault:
 
   packs:
-    - pack: AlifSemiconductor::Ensemble@1.1.1
+    - pack: AlifSemiconductor::Ensemble@1.2.1
     - pack: ARM::CMSIS@6.0.0
-    - pack: AlifSemiconductor::AzureRTOS@1.1.0
+    - pack: AlifSemiconductor::AzureRTOS@1.2.0
 
   target-types:
     - type: HE
