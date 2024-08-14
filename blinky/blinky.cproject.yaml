@@ -17,6 +17,10 @@ project:
       for-compiler: GCC
       for-context: +HP
 
+  misc:
+    - ASM:
+      - -include "Pre_Include_Global.h"
+
   output:
     base-name: $Project$
     type:
