@@ -1,25 +1,34 @@
-# VSCode Getting Started Template
-A simple Azure and CMSIS-Pack based example to setup and test VS Code development environment for Alif Ensemble kits.
-
-This example demonstrates GPIO usage using a button press to generate and GPIO interrupt which toggles the LED state.
+# VSCode Azure RTOS examples
+A simple Azure RTOS and CMSIS-Pack based example to setup and test VS Code development environment for Alif Ensemble kits.
 
 - Arm GNU toolchain is used as a default. There are build-type options for IAR and ARM compiler armclang for reference.
   - You can find the compiler specific settings in `cdefault.yaml`
   - **TIP:** The tools loaded by Arm Environment Manager are configured in `vcpkg-configuration.json`.
   - To download armclang you can add "arm:compilers/arm/armclang": "^6.22.0" to the "requires" object.
 
+# Projects in this repository
+- blinky
+  - This example demonstrates GPIO usage using a button press to generate and GPIO interrupt which toggles the LED state.
+- ethernet
+  - Simple DHCP example
+  - printf is retargeted to UART4
+- usb
+  - Acts as a serial device. Echoes input to output
+  - printf is retargeted to UART4
+- sd_card
+  - A readily FAT32 formatted SD card is expected. Partition should be smaller than 32GIB
+  - printf is retargeted to UART4
+
 ## Note about Ensemble gen1 support
 This example supports only Gen2 Ensemble Devices
 
 ## Quick start
-First clone the template project repository
+First clone the project repository
 ```
-git clone https://github.com/alifsemi/alif_vscode-template.git
-cd alif_vscode-template
-git submodule update --init
+git clone https://github.com/alifsemi/alif_ensemble-vscode-azure-blinky.git
 ```
 
-To build the template for a supported board other than the DevKit, you have to update the `board.h` file to pick the right variant of the board.
+To build the project for a supported board other than the DevKit, you have to update the `board.h` file to pick the right variant of the board.
 By default the template will build for gen2 DevKit.
 
 The required software setup consists of *VS Code*, *Git*, *CMake*, *Ninja build system*, *cmsis-toolbox*, *Arm GNU toolchain* and *Alif SE tools*.
@@ -46,7 +55,7 @@ For Alif SE tools and J-link debugging support add the following entries to VS C
 ```
 
 ## More detailed getting started guide
-Please refer to the [Getting started guide](doc/getting_started.md)
+Please refer to the template project's [Getting started guide](https://github.com/alifsemi/alif_vscode-template/blob/master/doc/getting_started.md)
 
 ## Examples for Alif Peripherals
 More Azure Alif peripheral examples can be found from https://github.com/alifsemi/alif_ensemble-Azure-RTOS/tree/main/THREADX/samples

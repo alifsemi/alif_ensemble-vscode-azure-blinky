@@ -6,6 +6,7 @@ default:
       C:
         - -std=c99
         - -fdata-sections
+        - -mcmse
       Link:
         - --specs=nosys.specs
         - --entry=Reset_Handler

@@ -3,3 +3,4 @@ RTE/
 tmp/
 *.yml
 *.cprj
+*.clangd

@@ -3,7 +3,8 @@ project:
   groups:
     - group: App
       files:
-        - file: LED_blink_app.c
+        - file: demo_netx.c
+        - file: dhcp/nxd_dhcp_client.c
     - group: Board
       files:
         - file: ../libs/board/devkit_gen2/board_init.c
@@ -29,6 +30,7 @@ project:
 
   add-path:
     - .
+    - dhcp
     - ../board/
     - ../libs/board/
   components:
@@ -54,7 +56,7 @@ project:
     # - component: AlifSemiconductor::Device:SOC Peripherals:I3C
     # - component: AlifSemiconductor::Device:SOC Peripherals:LPI2C
     # - component: AlifSemiconductor::Device:SOC Peripherals:LPTIMER
-    # - component: AlifSemiconductor::Device:SOC Peripherals:MHU
+    - component: AlifSemiconductor::Device:SOC Peripherals:MHU
     # - component: AlifSemiconductor::Device:SOC Peripherals:MIPI CSI2
     # - component: AlifSemiconductor::Device:SOC Peripherals:MIPI DSI
     # - component: AlifSemiconductor::Device:SOC Peripherals:MRAM
@@ -64,15 +66,15 @@ project:
     # - component: AlifSemiconductor::Device:SOC Peripherals:RTC
     # - component: AlifSemiconductor::Device:SOC Peripherals:SDMMC
     # - component: AlifSemiconductor::Device:SOC Peripherals:SPI
-    # - component: AlifSemiconductor::Device:SOC Peripherals:USART
+    - component: AlifSemiconductor::Device:SOC Peripherals:USART
     # - component: AlifSemiconductor::Device:SOC Peripherals:UTIMER
     # - component: AlifSemiconductor::Device:SOC Peripherals:WDT
 
     # - component: AlifSemiconductor::Device:OSPI FLASH XIP:core
     # - component: AlifSemiconductor::Device:OSPI FLASH XIP:utility
     # - component: AlifSemiconductor::Device:OSPI HYPERRAM XIP
-    # - component: AlifSemiconductor::Device:SE runtime Services:Initialization Helper&Source
-    # - component: AlifSemiconductor::Device:SE runtime Services:core&Source
+    - component: AlifSemiconductor::Device:SE runtime Services:core
+    - component: AlifSemiconductor::Device:SE runtime Services:Initialization Helper
 
     # - component: AlifSemiconductor::BSP:External peripherals:CAMERA Sensor MT9M114
     # - component: AlifSemiconductor::BSP:External peripherals:CAMERA Sensor ARX3A0
@@ -85,12 +87,13 @@ project:
     # - component: AlifSemiconductor::Device:Power Management
     # - component: AlifSemiconductor::Device:Retarget IO:STDERR
     # - component: AlifSemiconductor::Device:Retarget IO:STDIN
-    # - component: AlifSemiconductor::Device:Retarget IO:STDOUT
-    - component: AlifSemiconductor::Device:SE runtime Services:core
-    - component: AlifSemiconductor::Device:SE runtime Services:Initialization Helper
-    - component: AlifSemiconductor::Device:SOC Peripherals:MHU
+    - component: AlifSemiconductor::Device:Retarget IO:STDOUT
+    - component: ARM::CMSIS-Compiler:I/O:STDOUT&User
+
     - component: AlifSemiconductor::RTOS&AzureRTOS:Kernel:Core
     - component: AlifSemiconductor::RTOS&AzureRTOS:Kernel:GCC_Port
     # - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:Core
     # - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:CDC Device Class
     # - component: AlifSemiconductor::RTOS&AzureRTOS:USBX:Device Class Driver
+    - component: AlifSemiconductor::RTOS&AzureRTOS:Netx Duo:Core
+    - component: AlifSemiconductor::RTOS&AzureRTOS:Netx Duo:Ethernet Driver
